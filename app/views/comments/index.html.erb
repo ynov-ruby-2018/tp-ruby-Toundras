@@ -1,0 +1,17 @@
+<div class="logout">
+  <%= link_to 'Déconnexion', new_user_session_path %>
+</div>
+<%= form_tag comments_path root_path method: :post do %>
+  <%= text_area_tag 'comment', nil %>
+  <br />
+  <%= submit_tag 'Envoyer' %>
+<% end %>
+
+<ul>
+  <% @comments.each do |comment| %>
+    <div class="com">
+      <li><b><%= "#{current_user.email}" %></b></li>
+      <li><%= comment.content %></li>
+    </div>
+  <% end %>
+</ul>
