@@ -10,4 +10,6 @@ class CommentsController < ApplicationController
 
     redirect_to comments_path
   end
+  # J'ai trop vu ce bout de code... 
+  # Il manque des features
 end
