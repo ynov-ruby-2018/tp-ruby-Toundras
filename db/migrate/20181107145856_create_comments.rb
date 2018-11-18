@@ -3,6 +3,7 @@ class CreateComments < ActiveRecord::Migration[5.2]
     create_table :comments do |t|
       t.timestamps
       t.text :content
+      # Manque la référence au user avec: user_id
     end
   end
 end
