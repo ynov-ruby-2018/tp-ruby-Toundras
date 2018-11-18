@@ -1,8 +1,8 @@
 <div class="logout">
   <%= link_to 'Déconnexion', new_user_session_path %>
 </div>
-<%= form_tag comments_path root_path method: :post do %>
-  <%= text_area_tag 'comment', nil %>
+<%= form_tag comments_path root_path method: :post do %><!-- Confus... -->
+  <%= text_area_tag 'comment', nil %><!-- Ne pas oublier le nom de la colonne, par Ex: comment[content] -->
   <br />
   <%= submit_tag 'Envoyer' %>
 <% end %>
@@ -12,6 +12,7 @@
     <div class="com">
       <li><b><%= "#{current_user.email}" %></b></li>
       <li><%= comment.content %></li>
+      <!-- Il manque des features ! -->
     </div>
   <% end %>
 </ul>
